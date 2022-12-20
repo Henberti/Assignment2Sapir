@@ -9,7 +9,7 @@ import Task1.Vehicles.MiniBus;
 import Task1.Vehicles.SUV;
 import Task1.Vehicles.Truck;
 
-public class App {
+public class App {//HEN BERTI 201381407 && ELIRAN BALAISH 207598467
     public static void main(String[] args) {
         Scanner s = new Scanner(System.in);
        

@@ -1,5 +1,5 @@
 package Task1.ADT;
-public class Queue<T>{
+public class Queue<T>{//HEN BERTI 201381407 && ELIRAN BALAISH 207598467
     Node<T> first, last;
     public Queue(){
         first = last = null;

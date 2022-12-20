@@ -10,7 +10,7 @@ import Task1.ADT.Queue;
 import Task1.Vehicles.Vehicle;
 
 @SuppressWarnings("unchecked")
-public class VehicleWasher {
+public class VehicleWasher {//HEN BERTI 201381407 && ELIRAN BALAISH 207598467
     enum TYPE {Car, SUV, MiniBus, Truck}
     Queue<Vehicle> inLine, wash, after_wash[];
     Semaphore empty,full;
@@ -87,12 +87,15 @@ public class VehicleWasher {
             long time = getCurrentTime();
             vLog.write(temp, time, 2);
         }
-        // System.out.println("wash: "+wash);
+       //sleeping in wash
         lock_wash.unlock();
         Thread.sleep(washing_time);
       
     }
-
+    //the method finish the process of washing
+    //geting out from the queue and enqueue to the after wash queue
+    //the last thread that left will sum all the average time of each type
+    //of vihecle and close the log file
     public void Finish(){
         lock_wash.lock();
         Vehicle temp =wash.deQueue();
@@ -128,7 +131,7 @@ public class VehicleWasher {
             }
         } 
     }
-
+    //returns the current time
     public long getCurrentTime(){
         long time;
         try{

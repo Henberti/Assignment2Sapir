@@ -1,5 +1,5 @@
 package Task1.ADT;
-public class Node<T> {
+public class Node<T> {//HEN BERTI 201381407 && ELIRAN BALAISH 207598467
     T data;
     Node<T> next;
 

@@ -1,7 +1,7 @@
 package Task1.Vehicles;
 import Task1.VehicleWash.VehicleWasher;
 
-public abstract class Vehicle implements Runnable {
+public abstract class Vehicle implements Runnable {//HEN BERTI 201381407 && ELIRAN BALAISH 207598467
     private final int LICENCE;
     private final VehicleWasher WASHER;
     long finishTime;
@@ -17,6 +17,8 @@ public abstract class Vehicle implements Runnable {
         return "TYPE: "+this.getClass().getSimpleName()+ " LICENCE: "+LICENCE;
     }
 
+    //the run method start all 3 method from the vehicle washer 
+    //getting in line washing and finishing
     @Override
     public void run() {
        try {
